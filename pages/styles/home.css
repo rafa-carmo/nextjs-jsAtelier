@@ -1,0 +1,82 @@
+
+
+.infoTop {
+
+    width:  100vw;
+    height: 60vh;
+    display:flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items:center;
+
+    font-family: 'Norican', cursive;
+    font-size: 50px;
+    line-height: 75px;
+
+}
+
+.infoTop h3 {
+    font-weight: 400;
+    font-size: 23px;
+    font-family: 'Neuton', sans-serif;
+
+
+}
+
+
+
+.content{
+    width: 100vw;
+    
+}
+
+
+.infoWho {
+    flex: 1;
+}
+
+
+.infoDescription {
+    flex: 2;
+}
+
+.infoDescription p {
+    margin-top: 20px;
+    margin-right: 10vw;
+    
+}
+
+.content div{
+    display:flex;
+    flex-direction: row;
+
+
+}
+.content div div{
+    margin-left: 40px;
+    display:flex;
+    flex-direction: column;
+
+ }
+
+
+.content ul {
+    margin-top: 40px;
+    width: 100vw;
+    display:flex;
+    flex-direction: row;
+    justify-content:space-between;
+    align-items:center;
+}
+
+
+.content ul li{
+    margin-left: 40px;
+    margin-right: 40px;
+max-width: 30%;
+flex: 1;
+display: flex;
+align-items:center;
+justify-content:center;
+background-color: yellowgreen;
+}
