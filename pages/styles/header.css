@@ -32,10 +32,13 @@
     font-size: 20px;
     font-family: 'Neuton', sans-serif;
     flex: 1;
+    transition: color 0.1s;
 
 
 }
-
+.menuContainer a:hover{ 
+    color:rgba(88, 88, 88, 0.473);
+}
 .mediasContainer {
     flex: 2;
     display: flex;
