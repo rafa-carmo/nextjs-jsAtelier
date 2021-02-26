@@ -1,27 +1,22 @@
 
 import Header from './components/header'
 import Image from 'next/image'
-import axios from 'axios'
-import {GetStaticsProps} from 'next'
 
 
+export default function Home() {
 
-
-
-
-export default function Home({info}) {
+  
 
   return (
     <div className="container">
 
-      <title>{info.name}</title>
+      <title>Js Atelier</title>
       <Header />
 
       <div className="infoTop">
-        <center>
-          <h2>{info.name}</h2>
-          </center>
-          <h3>{info.sub}</h3>
+          <h2>Js</h2>
+          <h2> Atelier</h2>
+          <h3>Maquiadora Profissional</h3>
       </div>
 
 
@@ -33,12 +28,12 @@ export default function Home({info}) {
         <div className='contentWho'>
           <div className="infoWho">
           <h3>  Quem sou eu? </h3>
-          <h5>{info.whoI}</h5>
+          <h5>{process.env.NEXT_PUBLIC_WHO_I}</h5>
           </div>
 
 
           <div className="infoDescription">
-          <p>{info.detail}</p>
+          <p>{process.env.NEXT_PUBLIC_DESCRIPTION}</p>
           </div>
         </div>
         <div>
@@ -54,7 +49,7 @@ export default function Home({info}) {
                   <div className="topNumber">
 
                     <div className="intoNumber">
-                          <h3 className="number">01</h3> <p>{info.title1}</p>
+                          <h3 className="number">01</h3> <p>Noivas</p>
                     </div>
 
      
@@ -62,7 +57,7 @@ export default function Home({info}) {
              
 
                   <div className="content-text">
-                    <p>{info.content1}</p>
+                    <p>{process.env.NEXT_PUBLIC_INFO1}</p>
                   </div>
                   
              <div className="imagePc">
@@ -82,7 +77,7 @@ export default function Home({info}) {
                   <div className="topNumber">
 
                     <div className="intoNumber">
-                          <h3 className="number">02</h3> <p>{info.title2} </p>
+                          <h3 className="number">02</h3> <p>Formandas </p>
                     </div>
 
      
@@ -90,7 +85,7 @@ export default function Home({info}) {
              
 
                   <div className="content-text">
-                    <p>{info.content2}</p>
+                    <p>{process.env.NEXT_PUBLIC_INFO1}</p>
                   </div>
                   
        
@@ -103,7 +98,7 @@ export default function Home({info}) {
                   <div className="topNumber">
 
                     <div className="intoNumber">
-                          <h3 className="number">03</h3> <p>{info.title3}</p>
+                          <h3 className="number">03</h3> <p>Artísticas</p>
                     </div>
 
      
@@ -111,7 +106,7 @@ export default function Home({info}) {
              
 
                   <div className="content-text">
-                    <p>{info.content3}</p>
+                    <p>{process.env.NEXT_PUBLIC_INFO1}</p>
                   </div>
                   
              <div className="imagePc">
@@ -130,23 +125,4 @@ export default function Home({info}) {
   
 
   )
-}
-
-
-export async function getStaticProps(context) {
-
-  const server = process.env.NEXT_PUBLIC_SERVER
-
-  const response = await fetch(`${server}/api/info`);
-  const data = await response.json();
-
-
-
-  return {
-    props: {
-      info: data.data[0],
-    },
-    revalidate: 6000
-  }
-
 }
