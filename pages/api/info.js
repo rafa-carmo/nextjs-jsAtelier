@@ -1,4 +1,4 @@
-import { MongoClient, Db} from 'mongodb'
+import { MongoClient} from 'mongodb'
 import url from 'url'
 
 
@@ -29,13 +29,9 @@ async function connectToDatabase(uri){
 
 export default async ( request, response ) => {
 
+    
     const db = await connectToDatabase(process.env.MONGODB_URI)
-
-
     const collection = db.collection('info')
-
-
-
     const data = collection.find({}).toArray().then(data => response.status(200).json({data})) 
 
 

@@ -12,17 +12,12 @@
 a {
     text-decoration: none;
     color:black;
-    /* font: 600 38px;
-    font-family: 'Nunito', sans-serif; */
 }
 body {
     color: black;
-    background-color: #e0dede;
-
 }
 
 body, input, button, textarea {
     font: 400 18px;
     font-family: 'Nunito', sans-serif;
-
 }

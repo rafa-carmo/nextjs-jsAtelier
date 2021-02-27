@@ -4,6 +4,7 @@ import Image from 'next/image'
 import axios from 'axios'
 import {GetStaticsProps} from 'next'
 
+import {useState} from 'react'
 
 
 
@@ -12,15 +13,27 @@ import {GetStaticsProps} from 'next'
 
 export default function Home({info}) {
 
+  
+  const [settings, setSetting] = useState({
+    ...info})
+
   return (
+
+
+    
     <div className="container">
 
-      <title>{info.name.replace('/n', ' ')}</title>
+      <style>{`
+              body {
+                background-color: ${settings.bgColor};
+              }
+            `}</style>
+      <title>{settings.name.replace('/n', ' ')}</title>
       <Header />
 
       <div className="infoTop">
         <center>
-          <h2>{info.name.split("/n").map(function(item, idx) {
+          <h2>{settings.name.split("/n").map(function(item, idx) {
           return (
               <span key={idx}>
                   {item.trim()}
@@ -29,7 +42,7 @@ export default function Home({info}) {
            )
       })}</h2>
           </center>
-          <h3>{info.sub}</h3>
+          <h3>{settings.sub}</h3>
       </div>
 
 
@@ -41,12 +54,12 @@ export default function Home({info}) {
         <div className='contentWho'>
           <div className="infoWho">
           <h3>  Quem sou eu? </h3>
-          <h5>{info.whoI}</h5>
+          <h5>{settings.whoI}</h5>
           </div>
 
 
           <div className="infoDescription">
-          <p>{info.detail}</p>
+          <p>{settings.detail}</p>
           </div>
         </div>
         <div>
@@ -62,7 +75,7 @@ export default function Home({info}) {
                   <div className="topNumber">
 
                     <div className="intoNumber">
-                          <h3 className="number">01</h3> <p>{info.title1}</p>
+                          <h3 className="number">01</h3> <p>{settings.title1}</p>
                     </div>
 
      
@@ -70,11 +83,11 @@ export default function Home({info}) {
              
 
                   <div className="content-text">
-                    <p>{info.content1}</p>
+                    <p>{settings.content1}</p>
                   </div>
                   
              <div className="imagePc">
-                    <Image className="fileImage"  src="/noiva.png" alt="Noivas" width={130} height={215} /> 
+                    <Image className="fileImage"  src={settings.urlImage1} alt="Noivas" width={130} height={215} /> 
 
                     </div>
             </li>
@@ -82,7 +95,7 @@ export default function Home({info}) {
 
             <li>
       <div className="imagePc">
-                    <Image className="fileImage"  src="/formanda.png" alt="Formandas" width={130} height={215} /> 
+                    <Image className="fileImage"  src={settings.urlImage2} alt="Formandas" width={130} height={215} /> 
       </div>
 
 
@@ -90,7 +103,7 @@ export default function Home({info}) {
                   <div className="topNumber">
 
                     <div className="intoNumber">
-                          <h3 className="number">02</h3> <p>{info.title2} </p>
+                          <h3 className="number">02</h3> <p>{settings.title2} </p>
                     </div>
 
      
@@ -98,7 +111,7 @@ export default function Home({info}) {
              
 
                   <div className="content-text">
-                    <p>{info.content2}</p>
+                    <p>{settings.content2}</p>
                   </div>
                   
        
@@ -111,7 +124,7 @@ export default function Home({info}) {
                   <div className="topNumber">
 
                     <div className="intoNumber">
-                          <h3 className="number">03</h3> <p>{info.title3}</p>
+                          <h3 className="number">03</h3> <p>{settings.title3}</p>
                     </div>
 
      
@@ -119,11 +132,11 @@ export default function Home({info}) {
              
 
                   <div className="content-text">
-                    <p>{info.content3}</p>
+                    <p>{settings.content3}</p>
                   </div>
                   
              <div className="imagePc">
-                    <Image className="fileImage"  src="/artistica.png" alt="Noivas" width={130} height={215} /> 
+                    <Image className="fileImage"  src={settings.urlImage3} alt="Noivas" width={130} height={215} /> 
 
                     </div>
             </li>
