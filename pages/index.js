@@ -3,6 +3,7 @@ import Header from './components/header'
 import Image from 'next/image'
 import axios from 'axios'
 import {GetStaticsProps} from 'next'
+import parse from 'html-react-parser'
 
 
 
@@ -14,12 +15,19 @@ export default function Home({info}) {
   return (
     <div className="container">
 
-      <title>{info.name}</title>
+      <title>{info.name.replace('/n', ' ')}</title>
       <Header />
 
       <div className="infoTop">
         <center>
-          <h2>{info.name}</h2>
+          <h2>{info.name.split("/n").map(function(item, idx) {
+          return (
+              <span key={idx}>
+                  {item.trim()}
+                  <br/>
+              </span>
+           )
+      })}</h2>
           </center>
           <h3>{info.sub}</h3>
       </div>
