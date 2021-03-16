@@ -1,7 +1,7 @@
 
 import Header from './components/header'
 import Image from 'next/image'
-import axios from 'axios'
+
 import {GetStaticsProps} from 'next'
 
 import {useState} from 'react'
