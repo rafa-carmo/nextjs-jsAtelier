@@ -160,7 +160,7 @@ export default function Home({info}) {
       <div style={{flex:1}}>
 
       </div>
-      <div className="whoImage">
+      <div className="profileImage">
         <Image className="profileImage" src={settings.whoImage} alt="Noivas" width={450} height={555} /> 
 
       </div>

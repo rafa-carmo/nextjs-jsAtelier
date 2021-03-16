@@ -166,7 +166,9 @@
     width: 100%;
     justify-content:center;
 }
-
+.whoImage {
+    flex: 1
+}
 .whoAll {
     display: flex;
     width: 70%;
