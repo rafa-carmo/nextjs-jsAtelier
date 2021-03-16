@@ -22,6 +22,7 @@ export default function Home({info}) {
 
     
     <div className="container">
+      
 
       <style>{`
               body {
@@ -46,14 +47,14 @@ export default function Home({info}) {
       </div>
 
 
+    <div className="content" >
 
+<div className="contentBg">
 
-
-    <div className="content">
-
+</div>
         <div className='contentWho'>
           <div className="infoWho">
-          <h3>  Quem sou eu? </h3>
+          <h3>  O que fazemos? </h3>
           <h5>{settings.whoI}</h5>
           </div>
 
@@ -62,9 +63,7 @@ export default function Home({info}) {
           <p>{settings.detail}</p>
           </div>
         </div>
-        <div>
-      
-  </div>
+
 
 
         <ul>
@@ -147,6 +146,27 @@ export default function Home({info}) {
   </div>
 
 
+      <div className="whoContainer" style={{background:settings.profileColorBk}}>
+
+      <div className="whoAll"> 
+
+ 
+
+      <div className="whoInfo">
+        <h1>Meu Perfil</h1>
+        <br></br>
+        <p className="profileText">{settings.whoProfile} </p>
+      </div>
+      <div style={{flex:1}}>
+
+      </div>
+      <div className="whoImage">
+        <Image className="profileImage" src={settings.whoImage} alt="Noivas" width={450} height={555} /> 
+
+      </div>
+
+      </div>
+     </div>
     </div>
   
 
