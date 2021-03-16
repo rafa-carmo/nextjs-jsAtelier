@@ -165,9 +165,11 @@
     display: flex;
     width: 100%;
     justify-content:center;
+    padding: 20px;
 }
 .whoImage {
-    flex: 1
+    flex: 1;
+
 }
 .whoAll {
     display: flex;
