@@ -72,7 +72,7 @@ function ImgGridList() {
 
   return (
     <div className={classes.root}>
-    <GridList className={classes.gridList} cols={3} rows={4}>
+    <GridList className={classes.gridList} cols={3}>
       {tileData.map((tile) => (
         <GridListTile key={tile.img} cols={tile.cols || 1} rows={tile.rows || 1}>
           <img src={`grid/${tile.img}`} alt={tile.title} />

@@ -1,8 +1,9 @@
-import { makeStyles } from "@material-ui/core"
+import { makeStyles, Theme } from "@material-ui/core"
 import Head from "next/head"
 import TopBar from "./TopBar"
 
-const useStyles = makeStyles((theme) => ({
+
+const useStyles = makeStyles((theme: Theme) => ({
     root: {
         backgroundColor: "#e6e8e6",
         display: 'flex',

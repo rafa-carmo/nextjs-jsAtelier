@@ -2,7 +2,7 @@ import React, {useState} from 'react'
 import { makeStyles } from "@material-ui/styles"
 import AppBar from "@material-ui/core/AppBar"
 import Toolbar from "@material-ui/core/Toolbar"
-import { Box, Button, Typography, Hidden, ButtonGroup, Divider } from "@material-ui/core"
+import { Box, Button, Typography, Hidden, ButtonGroup, Divider, Theme } from "@material-ui/core"
 import InstagramIcon from '@material-ui/icons/Instagram'
 import FacebookIcon from '@material-ui/icons/Facebook'
 import { useRouter } from "next/router"
@@ -24,14 +24,10 @@ interface Menu {
     icon: any
 }
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles((theme: Theme) => ({
 
 
 
-    root: {
-        zIndex: theme.zIndex.drawer +1,
-        backgroundColor: theme.palette.background.default
-      },
       toolbar: {
         minHeight: 56,
         display: 'flex',
@@ -149,7 +145,7 @@ function TopBar() {
 
 
     return (
-    <AppBar className={classes.root} color="default" elevation={6}>
+    <AppBar color="default" elevation={6}>
         <Toolbar className={classes.toolbar}>
             <Hidden mdUp>
                 <Button onClick={toggleDrawer('left', true)}>

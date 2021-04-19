@@ -1,5 +1,5 @@
 
-import { Box, Container, Grid, Typography, Button, Card, CardMedia, CardContent } from "@material-ui/core";
+import { Box, Container, Grid, Typography, Button, Card, CardMedia, CardContent, Theme } from "@material-ui/core";
 import { makeStyles } from "@material-ui/styles"
 import Layout from "../components/Layout";
 import CssBaseline from '@material-ui/core/CssBaseline'
@@ -15,7 +15,7 @@ interface Card {
 }
 
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles((theme: Theme) => ({
     home: {
       fontFamily: 'Ubuntu Mono',
       fontStyle: 'bold',
